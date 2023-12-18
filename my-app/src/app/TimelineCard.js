@@ -11,7 +11,7 @@ import { Typography } from "@mui/material";
 import React from "react";
 
 
-const TimelineCard = ({ year, activity, details }) => {
+const TimelineCard = ({ time, activity, details }) => {
     return (
       <TimelineItem>
         <TimelineOppositeContent
@@ -20,7 +20,7 @@ const TimelineCard = ({ year, activity, details }) => {
           variant="body2"
           color="text.secondary"
         >
-          {year}
+          {time}
         </TimelineOppositeContent>
         <TimelineSeparator>
           <TimelineConnector />

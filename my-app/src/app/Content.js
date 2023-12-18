@@ -1,6 +1,7 @@
 "use client";
 import React from "react";
 import TimelineStruct from "./TimelineStructure";
+import Cards from "./Cards";
 
 const Content = () => {
     return (
@@ -8,11 +9,12 @@ const Content = () => {
             <div id="about" className="text-4xl">
                 ABOUT
             </div>
-            <div id="education" className="text-4xl">EDUCATION 
+            <div id="education" className="text-4xl flex flex-col items-center justify-center">EDUCATION 
                 <TimelineStruct />
             </div>
             <div id="project" className="text-4xl">
                 PROJECTS
+                <Cards />
             </div>
         </div>
     );
