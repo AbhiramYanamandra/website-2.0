@@ -1,12 +1,15 @@
+"use client";
 import React from "react";
 import Link from 'next/link';
 import { FaGithub, FaLinkedin} from "react-icons/fa";
 import { IoMdMail } from "react-icons/io";
+import {Card, CardHeader, CardBody, Image} from "@nextui-org/react";
+import TimelineStruct from "./TimelineStructure";
 
 export default function Page() {
 	return (
 		<>
-		<div className="bg-gray-900 h-screen w-screen">
+		<div className="bg-gray-900 h-max w-screen">
 			{/* Blobs */}
 			<div className="sticky">
 				<div className="fixed top-0 -left-4 w-72 h-72 bg-purple-300 rounded-full opacity-70 mix-blend-multiply filter blur-xl animate-blob"></div>
@@ -19,7 +22,7 @@ export default function Page() {
 				<div className="sticky top-0 h-screen flex flex-col justify-center items-start pl-10">
 					{/* Name & Ethos Statement */}
 					<div id="home" className="justify-center content-center">
-						<a href="#home" className="text-4xl">Abhiram Yanamandra</a>
+						<a href="/" className="text-4xl">Abhiram Yanamandra</a>
 						<p className="mt-1">Aspiring Robotics Engineer</p>
 						<p className="mt-1"> Just Do It</p>
 					</div>
@@ -42,11 +45,13 @@ export default function Page() {
 						</div>
 					</div>
 				</div>
-
-
 				<div className="flex-grow overflow-y-auto flex flex-col items-center justify-center p-8">
-					<div id="about" className="text-4xl">ABOUT</div>
-          			<div id="education" className="text-4xl">EDUCATION</div>
+					<div id="about" className="text-4xl">
+						ABOUT
+					</div>
+          			<div id="education" className="text-4xl">EDUCATION 
+						<TimelineStruct />
+					</div>
           			<div id="project" className="text-4xl">PROJECTS</div>
         		</div>
 			</div>
